@@ -1,0 +1,29 @@
+@font-face {font-family: "iconfont";
+  src: url('iconfont.eot?t=1611303262437'); /* IE9 */
+  src: url('iconfont.eot?t=1611303262437#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('data:application/x-font-woff2;charset=utf-8;base64,d09GMgABAAAAAAOcAAsAAAAAB8QAAANNAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHEIGVgCDHAqDAIJQATYCJAMQCwoABCAFhG0HSBvCBsgOJUHBwADgAQNGBNV+nz27+//tvXfIikliykdd+RAKHQnoUj5CRRgyIiqajciPbm8PqJikZ1JTRwKlfA05tWEUcZ36P4dLG0twfstyWXPR4qgXYLw1oLEnYEAldGJ8w9iVF7GeQGPBCMy1wvJ6cFAY3QLxSFV4cEiplZrkUIVuydgi3oGtmp6zl4C3/u/jn9hwIOlkRt/rdwokyP759W0VN7VvqnYXAZzxjGCTyNgECnGv1HwDF4Y3cRqlsY1joKoSY1VVvK3q+4+4exFX818eIclEl5HYBw6RMjsxjk0j+FVBI/GrKkGGFyKtMPoUeI/lc+N8apKnXFxG7d3GOL1h9uJF6wa4rNmwZKl/0/qB9c5Mq71a23r7dsOtW/V37jTevdtw6hZafrvg7N3+K+6MAZc0GK0Phwa4rTnCcM+ODjZmSEx8ODOBzdcJ4mpY9xwvfWebe8/3BenjrkEyM22j/1xnoxs/M2XpgSt5P16gD+jFj7wrifRj/zedvz01e+ptb8B/5XgrO2YM08q0jBnbChhEwbTA9DFjWtOf19e5u9nC5z7Bzf0RsHtD9sU78DH7o1PcMtgWF3wnOG5bXcClpnq47gaOPznSwnc1Lotzor8zGzPvOa/6vanR6hyY7Rm6PTTf289r5L/v7mVZuegPC2OBfMJ+BORH7EYA8kP0FwyCb7O3b+lyT/9dnQv4Eb2hE6iLfuwXzmnN+TOclllF5RmaUmS+zdasxe79dUloNPgfcUY8GUM63jqRUI3HkPSYh6xaRBbsJnS0DqGrOoXGhqLJrVEEJ0ov1s0CEIZshWTAZ8iGXEYW7GPomPAZuoaCg8ZVeM/ZWg7VKY9gnmIJCeOQKppNsqWjTkFyLVZGGXiS5PnERkx01YdiIqOzsSJswmSMAfpoJZZSGcnEbESFYDNsMJiRhZh7sUgjeyi1pEZFyWUvihTNRnByicB4FCZBBOMgKpGZiezmp5xy36+FKUYx4JGajAp9I4zQqbUjMSJFt0AWiU2tMq7lEt1oilgUJUNkhJkRUgiMmMEMmyGW8la9MBEVqadH0CJVFMoltxVHzi81PuECaBhzlEiRo0RH/41Ruq6asFN/pJE32WFJpWZii2OXagAAAAAA') format('woff2'),
+  url('iconfont.woff?t=1611303262437') format('woff'),
+  url('iconfont.ttf?t=1611303262437') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+ */
+  url('iconfont.svg?t=1611303262437#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-bussiness-man:before {
+  content: "\e6ef";
+}
+
+.icon-editor:before {
+  content: "\e74d";
+}
+
+.icon-email:before {
+  content: "\e74f";
+}
+
