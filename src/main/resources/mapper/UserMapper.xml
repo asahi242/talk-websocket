@@ -11,6 +11,7 @@
         <result column="online" jdbcType="INTEGER" property="online" />
         <result column="sex" jdbcType="INTEGER" property="sex" />
         <result column="age" jdbcType="INTEGER" property="age" />
+        <result column="isdelete" jdbcType="INTEGER" property="isDelete" />
         <result column="createTime" jdbcType="DATE" property="createTime" />
         <result column="modifyTime" jdbcType="DATE" property="modifyTIme" />
 
@@ -21,20 +22,14 @@
     <update id="setOnline" >
         update user set online=#{online} where id=#{id}
     </update>
-    <select id="getGroupById" resultType="com.demo.talk.entity.dto.GroupDto">
 
-        select u.id userId,g.groupNum,g.groupName,g.createTime,g.modifyTime
-        from `user` u left join `group` g on u.id=g.userid
-        where g.isdelete=0 and u.id=#{id}
-
-    </select>
     <select id="getFriend" resultType="com.demo.talk.entity.dto.FriendDto">
         select l.groupNum,u.id userId,u.name,u.online,u.sex,u.age
         from user u
         inner join (
         select f.groupNum,f.friendid,f.createTime,f.modifyTime
         from friend f
-        where f.isdelete=0 and f.groupNum=${groupNum}
+        where f.isdelete=0 and f.groupNum=#{groupid} and f.userid=#{userid}
         ) l on u.id=l.friendid
     </select>
 

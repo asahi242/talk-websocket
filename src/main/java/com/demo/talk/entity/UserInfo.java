@@ -1,6 +1,8 @@
 package com.demo.talk.entity;
 
+import com.demo.talk.entity.dto.GroupDto;
 import com.demo.talk.entity.po.Group;
+import com.demo.talk.entity.vo.GroupVo;
 import lombok.Data;
 
 import java.util.List;
@@ -10,5 +12,5 @@ public class UserInfo {
     private int id;
     private String name;
     private int online;
-    private List<Group> group;//分组
+    private List<GroupDto> group;//分组
 }

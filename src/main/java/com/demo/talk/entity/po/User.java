@@ -20,6 +20,7 @@ public class User implements Serializable {
     private Integer online;
     private Integer sex;
     private Integer age;
+    private Integer isDelete;
     private Date createTime;
     private Date modifyTime;
 }

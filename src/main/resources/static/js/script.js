@@ -47,3 +47,33 @@ editors.forEach(editor =>{
 
   })
 });
+//修改用户状态
+$("#switchStatus").click(function(){
+  var status = $(this).is(':checked')?1:0;
+  var id = $("#userinfo_id").text().split(':')[1];
+  console.log(id);
+  var talk = new Talk();
+  $.ajax({
+    url:'/user/setonline',
+    data:{
+      online:status,
+      id:id
+    },
+    type:'get',
+    dataType:'json',
+    success:function(obj){
+      if (obj){
+        talk.alert({content:'修改成功！',time:2,style:'success'})
+      }else{
+        talk.alert({content:'修改失败！', time:2, style:'danger'})
+      }
+    },
+    error:function(){
+      talk.alert({content:'请求失败！', time:2, style:'danger'})
+    }
+  })
+})
+//获取星期
+var date = new Date();
+var day = $(".activity-days-wrapper .day");
+day.eq(date.getDay()-1).addClass('current');

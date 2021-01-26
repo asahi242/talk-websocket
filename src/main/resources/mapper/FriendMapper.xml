@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.demo.talk.mapper.FriendMapper">
+    <resultMap id="BaseResultMap" type="com.demo.talk.entity.po.Friend">
+        <!--
+          WARNING - @mbggenerated
+        -->
+        <id column="id" jdbcType="INTEGER" property="id" />
+        <result column="userid" jdbcType="INTEGER" property="userId" />
+        <result column="friendid" jdbcType="INTEGER" property="friendId" />
+        <result column="groupNum" jdbcType="INTEGER" property="groupNum" />
+        <result column="isdelete" jdbcType="INTEGER" property="isDelete" />
+        <result column="createTime" jdbcType="DATE" property="createTime" />
+        <result column="modifyTime" jdbcType="DATE" property="modifyTIme" />
+
+    </resultMap>
+
+
+</mapper>

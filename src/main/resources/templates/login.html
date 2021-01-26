@@ -4,8 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" th:href="@{/static/css/base.css}" href="../static/css/base.css">
+    <link rel="stylesheet" th:href="@{/static/layui/css/layui.css}" href="../static/layui/css/layui.css">
     <title>login登录页</title>
     <script th:src="@{/static/js/jq/jquery-3.5.1.js}" src="js/jquery.min.js"></script>
+    <script th:src="@{/static/layui/layui.js}" src="../static/layui/layui.js"></script>
     <style>
         #alertBox{
             position:absolute;
@@ -25,10 +27,10 @@
                 <li class="t_titles">欢迎登录</li>
                 <li id="alertBox" th:text="${login_error}">111</li>
                 <li>
-                    <input class="user" type="text" name="name" placeholder="请输入您的用户名">
+                    <input class="user" type="text" name="name" placeholder="请输入您的用户名" th:value="${name}">
                 </li>
                 <li>
-                    <input type="text" name="password" placeholder="请输入您的密码">
+                    <input type="password" name="password" placeholder="请输入您的密码" th:value="${password}">
                 </li>
                 <li class="t_checkbox">
                     <i></i>
@@ -39,6 +41,39 @@
                 </li>
             </ul>
 
+        </form>
+
+    </main>
+    <main class="t_reg">
+        <form class="layui-form" action="">
+            <div class="layui-form-item">
+                <div class="layui-input-block">
+                    <input type="text" name="name" required  lay-verify="required" placeholder="用户名" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <div class="layui-input-inline">
+                    <input type="password" name="password" required lay-verify="required" placeholder="密码" autocomplete="off" class="layui-input">
+                </div>
+                <div class="layui-form-mid layui-word-aux">辅助文字</div>
+            </div>
+            <div class="layui-form-item">
+                <div class="layui-input-inline">
+                    <input type="text" name="age" required  lay-verify="required" placeholder="年龄" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <div class="layui-input-inline">
+                    <input type="radio" name="sex" value="男" title="男" checked>
+                    <input type="radio" name="sex" value="女" title="女" >
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <div class="layui-input-block">
+                    <button class="layui-btn" lay-submit lay-filter="formDemo">立即提交</button>
+                    <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+                </div>
+            </div>
         </form>
 
     </main>
@@ -62,6 +97,9 @@
         //调用
         CanvasParticle(config);
     }
+    layui.use('form',function(){
+        var form = layui.form;
+    })
 </script>
 <script type="text/javascript" th:src="@{/static/js/canvas.js}" src="../static/js/canvas.js"></script>
 </body>

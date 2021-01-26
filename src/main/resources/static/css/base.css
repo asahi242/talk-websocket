@@ -280,3 +280,20 @@ select{
         width: 25.2rem;
     }
 }
+
+
+.t_reg{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    width: 60rem;
+    height: 50rem;
+    background: #fefbf9;
+    border-radius: 0.5rem;
+    left: 16rem;
+    text-align: center;
+    z-index: 10;
+    padding: 30px 0;
+    padding-right: 40px;
+}

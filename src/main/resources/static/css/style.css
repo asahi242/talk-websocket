@@ -841,3 +841,31 @@ body[data-theme=dark] {
 .talk-switch-item{
   display: none;
 }
+.talk-alert{
+  position: absolute;
+  text-align: center;
+  line-height: 40px;
+  top: 20px;
+  width:300px;
+  height: 40px;
+  background-color: #5CB85C;
+  box-shadow: 0px 0px 1px 1px #5CB85C;
+  border-radius: 10px;
+  color: #ffffff;
+}
+.talk-alert[talk-style=success]{
+  background-color: #5CB85C;
+  box-shadow: 0px 0px 1px 1px #5CB85C;
+}
+.talk-alert[talk-style=info]{
+  background-color: #5BC0DE;
+  box-shadow: 0px 0px 1px 1px #5BC0DE;
+}
+.talk-alert[talk-style=warning]{
+  background-color: #EC971F;
+  box-shadow: 0px 0px 1px 1px #EC971F;
+}
+.talk-alert[talk-style=danger]{
+  background-color: #C9302C;
+  box-shadow: 0px 0px 1px 1px #C9302C;
+}
