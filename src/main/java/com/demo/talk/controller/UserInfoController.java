@@ -1,5 +1,6 @@
 package com.demo.talk.controller;
 
+import com.demo.talk.entity.po.User;
 import com.demo.talk.entity.vo.OnlineVo;
 import com.demo.talk.mapper.UserMapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,6 +20,16 @@ public class UserInfoController {
             result = true;
         }
         return result;
+    }
+    //根据用户名获取用户
+    @PostMapping("/getByName")
+    @ResponseBody
+    public Boolean getByName(String name){
+        User user = userMapper.getByName(name);
+        if (user!=null){
+            return true;
+        }
+        return false;
     }
 
 

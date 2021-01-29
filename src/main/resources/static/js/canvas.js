@@ -179,3 +179,46 @@ var CanvasParticle = (function(){
 	}
 	return canvasInit;
 })();
+
+//判断密码强弱
+$("input[name='password']").keyup(function(){
+	var val = $(this).val();
+	var week = /^[0-9]$|^[a-zA-Z]$/;    //全是数字或全是字母     6-16个字符
+	var middle = /^[A-Za-z0-9]{6,16}$/;     //数字、26个英文字母      6-16个字符
+	var strong = /^[\w.,@!#$%^&*(){}:]{6,16}$/;           // 由数字、26个英文字母或者下划线组成的字符串    6-16个字符
+	if(val==''){
+		$("#talk-strength .layui-progress").css('display','none');
+		$("#talk-strength span").css("display","none");
+		$("#talk-strength span").text("");
+	}else{
+		$("#talk-strength .layui-progress").css('display','inline-block');
+		$("#talk-strength span").css("display","inline");
+	}
+	if(val.match(week)){
+		$("#talk-strength .layui-progress div").addClass("layui-bg-green");
+		$("#talk-strength .layui-progress div").attr("lay-percent","33%");
+		$("#talk-strength .layui-progress div").css("width","33%");
+		$("#talk-strength span").text("弱");
+	}else if(val.match(middle)){
+		$("#talk-strength .layui-progress div").removeClass("layui-bg-green");
+		$("#talk-strength .layui-progress div").addClass("layui-bg-orange");
+		$("#talk-strength .layui-progress div").attr("lay-percent","66%");
+		$("#talk-strength .layui-progress div").css("width","66%");
+		$("#talk-strength span").text("中");
+	}else if(val.match(strong)){
+		$("#talk-strength .layui-progress div").removeClass("layui-bg-green");
+		$("#talk-strength .layui-progress div").removeClass("layui-bg-orange");
+		$("#talk-strength .layui-progress div").addClass("layui-bg-red");
+		$("#talk-strength .layui-progress div").attr("lay-percent","100%");
+		$("#talk-strength .layui-progress div").css("width","100%");
+		$("#talk-strength span").text("强");
+	}
+})
+
+$(".t_btn.reg").click(function(){
+	if ($(".t_reg").css('display')=='none'){
+		$(".t_reg").css("display","block")
+	}else{
+		$(".t_reg").css("display","none")
+	}
+})
