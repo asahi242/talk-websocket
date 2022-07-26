@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>GetUserMedia实例</title>
+    <style>
+        #remove{
+            width: 50px;
+            height: 35px;
+        }
+    </style>
+    <script th:src="@{/static/js/jq/jquery-3.5.1.js}" src="js/jquery.min.js"></script>
+</head>
+<body>
+    <div id="msg"></div>
+
+</body>
+
+
+<script type="text/javascript">
+    setInterval(function(){
+        $.ajax({
+            url:"http://192.168.1.138/comecall/index.php",
+            data:{
+                module:'api.DeviceAPI',
+                action:'Status',
+                device:'8001'
+            },
+            type:'get',
+            success:function(res){
+                console.log(res)
+                if (res.state=='Ringing'&&$("#msg").text()==''){
+                    $("#msg").append(res);
+                    $("#msg").append('<button id="remove" >X</button>');
+                }
+            }
+        })
+    }, 3000);
+    $("#remove").click(function(){
+        $("#msg").text();
+    })
+</script>
+
+</html>

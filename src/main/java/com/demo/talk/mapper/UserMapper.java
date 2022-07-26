@@ -6,6 +6,7 @@ import com.demo.talk.entity.po.Group;
 import com.demo.talk.entity.po.User;
 import com.demo.talk.entity.UserInfo;
 import com.demo.talk.entity.vo.OnlineVo;
+import com.demo.talk.entity.vo.UserVo;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Component;
 import tk.mybatis.mapper.common.Mapper;
@@ -18,6 +19,7 @@ public interface UserMapper extends Mapper<User> {
     User getByName(String account);
     int setOnline(OnlineVo vo);
     List<FriendDto> getFriend(@Param("groupid") Integer groupid, @Param("userid") Integer userid);
+    Boolean addUser(UserVo vo);
 
 }
 

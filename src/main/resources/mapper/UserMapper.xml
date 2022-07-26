@@ -32,5 +32,9 @@
         where f.isdelete=0 and f.groupNum=#{groupid} and f.userid=#{userid}
         ) l on u.id=l.friendid
     </select>
+    <insert id="addUser" parameterType="com.demo.talk.entity.vo.UserVo">
+        insert into user(`name`,password,sex,birth,online,age,isdelete,createTime,modifyTime)
+        values(${name},${password},${sex},${birth},${online},${age},${isDelete},${createTime},${modifyTime});
+    </insert>
 
 </mapper>

@@ -40,6 +40,10 @@ public class LoginController {
     public String demo(){
         return "demo";
     }
+    @GetMapping("/demo1")
+    public String demo1(){
+        return "demo1";
+    }
 
     @PostMapping("/login")
     public String login(HttpServletRequest request,Model model, UserVo vo){
